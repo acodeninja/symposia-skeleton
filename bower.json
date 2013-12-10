@@ -1,0 +1,12 @@
+{
+  "name": "onmylemon-frontend",
+  "dependencies": {
+    "symposia": "https://github.com/posbo/symposia.git#0.2.16",
+    "requirejs-plugins": "~1.0.2",
+    "bootstrap": "~2.3.2",
+    "alertify": "~0.3.10",
+    "nprogress": "~0.1.2",
+    "backbone-amd": "~1.1.0",
+    "bootstrap-datepicker": "~1.2.0"
+  }
+}

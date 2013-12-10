@@ -1,0 +1,24 @@
+<% _.each( questions, function (question) { %>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <%= question.title %>
+            <span class="badge pull-right">
+                <%= question.owner.reputaion %>
+            </span>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <% _.each(question.tags) function (tag) { %>
+          <span class="label label-info"><%= tag %></span>
+        <% }); %>
+    </div>
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <a href="http://stackoverflow.com/questions/<%= question.id %>">
+                View Question
+            </a>
+        </h3>
+    </div>
+</div>
+<% }); %>

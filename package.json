@@ -1,0 +1,34 @@
+{
+  "name": "symposia-skeleton",
+  "version": "0.1.0",
+  "author": "Lawrence Goldstien",
+  "description": "A skeleton symposia application, a good starting point to create a front end app using symposia.",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Paul Osborne",
+      "email": "paul.osborne.uk@gmail.com",
+      "url": "posbo.me"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lgoldstien/symposia-skeleton.git"
+  },
+  "dependencies": {
+    "bower": "~1.2.8",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-cli": "~0.1.11",
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-mocha": "~0.4.7",
+    "grunt-contrib-less": "~0.8.3"
+  },
+  "scripts": {
+    "install": "node_modules/bower/bin/bower install"
+  }
+}
