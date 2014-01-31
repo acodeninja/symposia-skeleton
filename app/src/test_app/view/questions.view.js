@@ -13,8 +13,7 @@ define( function (require) {
         },
         render: function () {
             this.$el.empty();
-            console.log("render view");
-            this.$el.html(_.template(this.template, { journals: this.collection.toJSON() }));
+            this.$el.html(_.template(this.template, { questions: this.collection.toJSON() }));
             return this;
         }
     });

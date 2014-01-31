@@ -8,10 +8,11 @@ define( function (require) {
     return Backbone.Collection.extend({
         model: QuestionModel,
         url: function () {
-            return "https://api.stackoverflow.com/1.1/questions/no-answers?order=desc&sort=activity";
+            return "https://api.stackexchange.com/2.1/questions/unanswered?order=desc&sort=activity&site=stackoverflow";
         },
         parse: function (data) {
-            return data.questions;
+            console.log(data);
+            return data.items;
         }
     });
 });

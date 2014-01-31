@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuites time="0.133"><testsuite name="Title Test" tests="1" failures="0" errors="0" time="0.133" timestamp="2014-01-31T13:13:44.230Z" package="tests/uitest"><testcase name="Subject is strictly true" classname="tests/uitest" time="0.133"></testcase><system-out></system-out></testsuite></testsuites>

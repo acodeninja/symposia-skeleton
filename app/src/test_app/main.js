@@ -14,14 +14,13 @@ define(function(require) {
         return {
             init: function () {
                 questionsCollection = new QuestionsCollection();
-                
+                this.render();
+            },
+            render: function () {
                 questionsCollection.fetch({
                     success: this.showQuestions.bind(this),
                     error: this.showError.bind(this)
                 });
-            },
-            render: function () {
-                
             },
             showQuestions: function (collection) {
                 questionsView = new QuestionsView({
@@ -32,7 +31,6 @@ define(function(require) {
             showError: function (collection, ajax) {
                 var $element = sandbox.getElement(),
                     renderedError = _.template(__errorTemplate, ajax);
-
                 $element.html(renderedError);
             },
             destroy: function () {

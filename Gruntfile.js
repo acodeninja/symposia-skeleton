@@ -7,6 +7,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-casper');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -120,13 +121,25 @@ module.exports = function(grunt) {
                 files: '<%= meta.css %>',
                 tasks: ['build:css']
             }
+        },
+        casper: {
+            uiTest : {
+                options : {
+                    test : true
+                },
+                files : {
+                    'tests/results/uitest.xml' : ['tests/uitest.js']
+                }
+            }
         }
     });
 
 
-    grunt.registerTask('default',['jshint','build:vendor','build:app','build:css']);
+    grunt.registerTask('default',['jshint','build:vendor','build:app','build:css','test:integration']);
     grunt.registerTask('build:vendor',['concat:vendor','uglify:vendor']);
     grunt.registerTask('build:app',['requirejs','uglify:app']);
     grunt.registerTask('build:css',['less','concat:vendor_css']);
+    grunt.registerTask('test', ['test:integration']);
+    grunt.registerTask('test:integration',['connect', 'casper']);
 
 };
